@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!---- icon cdn link---->
-
+    <script src="./js/Products.js"></script>
 
 </head>
 
@@ -55,24 +55,36 @@
 
     <div class="small container">
 
+        <h2 style="margin-top: 20px;">All Products
+    
+        </h2>
+        <div class="sortingContainer">
+            <div class="row row-2">
 
-        <div class="row row-2">
-            <h2>All Products
+                <select onchange="categorieTshirt()" id="catigorie">
+                    <option value="">Default Sorting</option>
+                    <option value="tshirt">T-Shirt</option>
+                    <option value="shoes">Shoose</option>
+                    <option value="underwear">Underwear</option>
+                    <option value="watch">Watch</option>
+                    <option value="socks">T9acher</option>
+                </select>
+            </div>
+            <div class="row row-2">
 
-            </h2>
-            <select>
-                <option>Default Sorting</option>
-                <option>Sort by Price</option>
-                <option>Sort by Popularity</option>
-                <option>Sort by Sale</option>
-            </select>
+                <select>
+                    <option>Sort by Price</option>
+                    <option>Sort by Popularity</option>
+                    <option>Sort by Sale</option>
+                </select>
+            </div>
         </div>
 
 
         <div class="row">
 
 
-            <div class="col-4">
+            <div class="col-4 tshirt">
                 <img src="Images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -85,9 +97,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 shoes">
                 <img src="Images/product-2.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -98,9 +110,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 underwear">
                 <img src="Images/product-3.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Underwear</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -111,9 +123,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 tshirt">
                 <img src="Images/product-4.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Puma T-Shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -130,9 +142,9 @@
 
         <div class="row">
 
-            <div class="col-4">
+            <div class="col-4 shoes">
                 <img src="Images/product-5.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Nike Air Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -143,9 +155,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 tshirt">
                 <img src="Images/product-6.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Puma Shirts</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -156,9 +168,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 socks">
                 <img src="Images/product-7.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Socks 3 Colors</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -169,9 +181,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 watch">
                 <img src="Images/product-8.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Rolex Watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -184,9 +196,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 watch">
                 <img src="Images/product-9.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Classic Rolex Watech</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -197,9 +209,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 shoes">
                 <img src="Images/product-10.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Puma Shoes Flag</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -210,9 +222,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 shoes">
                 <img src="Images/product-11.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Gree Sketcher</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -223,9 +235,9 @@
                 <p>$50.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 underwear">
                 <img src="Images/product-12.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Black Nike Underwear</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -302,7 +314,9 @@
     </div>
 
     <!-----------------JS----------------------->
-
+    <script>
+        
+    </script>
 
 </body>
 

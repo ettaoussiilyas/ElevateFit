@@ -103,6 +103,7 @@ p{
     margin:auto;/*make images in center*/
     padding-left: 25px;
     padding-right: 25px;
+
 }
 /*col-4 will edit col of images*/
 .col-4{
@@ -557,4 +558,14 @@ form a{
         display:none;/*hide product name in smaller screen*/
     }
 
+}
+.sortingContainer{
+    width: 100%;
+    /* background-color: #ff523b; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: min-content;
+    padding: 0;
+    margin: 0;
 }
