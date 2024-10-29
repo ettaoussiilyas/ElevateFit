@@ -146,7 +146,12 @@
     background:var(--white);
     color:var(--orange);
   }
-  
+  .shopLink:hover{
+    color:var(--white);
+  }
+  .shopLink{
+    color: var(--orange);
+  }
   
   header .content .shopNow:hover{
     background:var(--orange);
