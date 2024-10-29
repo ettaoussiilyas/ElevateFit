@@ -96,26 +96,13 @@ p{
 .col-3 img{
     width: 100%;/*utilize full col-3 width which has min-width of 250 px*/
 }
-/*featured products*/
-/*small container edit whole section consist of rows*/
-/* .small container{
+.small container{
     max-width: 1080px;
     margin:auto;
     padding-left: 25px;
     padding-right: 25px;
-    display: grid;
-    grid-template-columns: 3;
-} */
-.small.container {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    grid-auto-flow: dense; /* Fills in empty spaces when some items are hidden */
-    gap: 20px; /* Optional: adjusts the spacing between items */
 }
+
 
 /*col-4 will edit col of images*/
 .col-4{
@@ -580,4 +567,43 @@ form a{
     height: min-content;
     padding: 0;
     margin: 0;
+}
+/* section products container */
+.product-container-grid {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-auto-flow: dense; /* Fills in empty spaces when some items are hidden */
+    gap: 20px; /* Optional: adjusts the spacing between items */
+}
+
+/* make the product cart showing a button on the hover */
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.view-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ff523b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.product-card:hover .view-button {
+    display: block;
+}
+.product-card:hover .product-image {
+    opacity: 0.5;
 }
