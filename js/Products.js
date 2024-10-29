@@ -59,3 +59,45 @@ function categorieTshirt() {
         });
     });
 }
+// sorting by price
+
+function showRangeInput() {
+    const sortOptions = document.getElementById("sort-options");
+    const rangeInputContainer = document.getElementById("range-input-container");
+
+    if (sortOptions.value === "price") {
+        rangeInputContainer.style.display = "block";
+    } else {
+        rangeInputContainer.style.display = "none";
+        // showAllProducts();
+    }
+}
+// showing change of price
+
+function updatePriceValue(value) {
+    const priceValue = document.getElementById("price-value");
+    priceValue.textContent = `$${value}`; // Display the current range value
+    filterProductsByPrice(value);
+}
+
+// showing by price
+
+function filterProductsByPrice(maxPrice) {
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+        const productPrice = parseInt(product.getAttribute("data-price"));
+        if (productPrice <= maxPrice) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+function showAllProducts() {
+    const products = document.querySelectorAll(".product-card");
+    products.forEach(product => {
+        product.style.display = "block";
+    });
+}

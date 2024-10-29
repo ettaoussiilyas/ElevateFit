@@ -52,39 +52,41 @@
 
     <!--Featured Products-->
 
+    <div class="sortingContainer">
+        <div class="row row-2">
 
+            <select onchange="categorieTshirt()" id="catigorie">
+                <option value="">Default Sorting</option>
+                <option value="tshirt">T-Shirt</option>
+                <option value="shoes">Shoose</option>
+                <option value="underwear">Underwear</option>
+                <option value="watch">Watch</option>
+                <option value="socks">Socks</option>
+            </select>
+        </div>
+        <div class="row row-2">
+
+            <select id="sort-options" onchange="showRangeInput()">
+                <option value="">Default Sorting</option>
+                <option value="price">Sort by Price</option>
+                <option value="popularity">Sort by Popularity</option>
+                <option value="sale">Sort by Sale</option>
+            </select>
+            
+            <div id="range-input-container" style="display: none;">
+                <label for="volume" style="padding-left: 10px;">Price Range: </label>
+                <input type="range" id="volume" name="volume" min="30" max="100" oninput="updatePriceValue(this.value)" />
+                <span id="price-value">$</span>
+            </div>
+
+        </div>
+    </div>
     <div class="small container">
 
-        <h2 style="margin-top: 20px;">All Products
-    
-        </h2>
-        <div class="sortingContainer">
-            <div class="row row-2">
-
-                <select onchange="categorieTshirt()" id="catigorie">
-                    <option value="">Default Sorting</option>
-                    <option value="tshirt">T-Shirt</option>
-                    <option value="shoes">Shoose</option>
-                    <option value="underwear">Underwear</option>
-                    <option value="watch">Watch</option>
-                    <option value="socks">T9acher</option>
-                </select>
-            </div>
-            <div class="row row-2">
-
-                <select>
-                    <option>Sort by Price</option>
-                    <option>Sort by Popularity</option>
-                    <option>Sort by Sale</option>
-                </select>
-            </div>
-        </div>
+       <!-- <div class="row"> -->    <!--row-->
 
 
-        <div class="row">
-
-
-            <div class="col-4 tshirt">
+            <div class="tshirt col-4 product-card" data-price="20"> <!--col-4 tshirt-->
                 <img src="Images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -94,10 +96,10 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$20</p>
             </div>
 
-            <div class="col-4 shoes">
+            <div class="shoes col-4 product-card" data-price="50"> <!--col-4-->
                 <img src="Images/product-2.jpg">
                 <h4>Black Shoes</h4>
                 <div class="rating">
@@ -107,10 +109,10 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$50</p>
             </div>
 
-            <div class="col-4 underwear">
+            <div class="underwear col-4 product-card" data-price="75"> <!--col-4-->
                 <img src="Images/product-3.jpg">
                 <h4>Black Underwear</h4>
                 <div class="rating">
@@ -120,10 +122,10 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$75</p>
             </div>
 
-            <div class="col-4 tshirt">
+            <div class="tshirt col-4 product-card" data-price="59"><!--col-4-->
                 <img src="Images/product-4.jpg">
                 <h4>Black Puma T-Shirt</h4>
                 <div class="rating">
@@ -134,15 +136,15 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
                 </div>
-                <p>$50.00</p>
+                <p>$59</p>
             </div>
-        </div>
+        <!--</div>-->
 
 
 
-        <div class="row">
+        <!--<div class="row">-->
 
-            <div class="col-4 shoes">
+            <div class="shoes col-4 product-card" data-price="80"><!--col-4-->
                 <img src="Images/product-5.jpg">
                 <h4>Nike Air Shoes</h4>
                 <div class="rating">
@@ -152,10 +154,10 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$80</p>
             </div>
 
-            <div class="col-4 tshirt">
+            <div class=" tshirt col-4 product-card" data-price="79"><!--col-4-->
                 <img src="Images/product-6.jpg">
                 <h4>Black Puma Shirts</h4>
                 <div class="rating">
@@ -165,10 +167,10 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$79</p>
             </div>
 
-            <div class="col-4 socks">
+            <div class=" socks col-4 product-card" data-price="25"> <!--col-4-->
                 <img src="Images/product-7.jpg">
                 <h4>Socks 3 Colors</h4>
                 <div class="rating">
@@ -178,10 +180,10 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$25</p>
             </div>
 
-            <div class="col-4 watch">
+            <div class=" watch col-4 product-card" data-price="60"> <!--col-4-->
                 <img src="Images/product-8.jpg">
                 <h4>Black Rolex Watch</h4>
                 <div class="rating">
@@ -192,11 +194,11 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
                 </div>
-                <p>$50.00</p>
+                <p>$60</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4 watch">
+        <!--</div>-->
+        <!--<div class="row">--> <!--row-->
+            <div class=" watch col-4 product-card" data-price="100"> <!--col-4-->
                 <img src="Images/product-9.jpg">
                 <h4>Classic Rolex Watech</h4>
                 <div class="rating">
@@ -206,10 +208,10 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$100</p>
             </div>
-
-            <div class="col-4 shoes">
+ 
+            <div class="shoes col-4 product-card" data-price="30"> <!--col-4-->
                 <img src="Images/product-10.jpg">
                 <h4>Puma Shoes Flag</h4>
                 <div class="rating">
@@ -219,10 +221,10 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$30</p>
             </div>
 
-            <div class="col-4 shoes">
+            <div class="shoes col-4 product-card" data-price="20"> <!--col-4-->
                 <img src="Images/product-11.jpg">
                 <h4>Gree Sketcher</h4>
                 <div class="rating">
@@ -232,10 +234,10 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$20</p>
             </div>
 
-            <div class="col-4 underwear">
+            <div class=" underwear col-4 product-card" data-price="50"> <!--col-4-->
                 <img src="Images/product-12.jpg">
                 <h4>Black Nike Underwear</h4>
                 <div class="rating">
@@ -246,21 +248,21 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
                 </div>
-                <p>$50.00</p>
+                <p>$50</p>
             </div>
-        </div>
+        <!--</div>-->
 
         `
-        <div class="page-btn">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>&#8594;</span>
 
-        </div>
     </div>
+    <div class="page-btn" style="margin-left: auto; margin-right: auto;">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
 
+    </div>
     <!-------footer------->
     <div class="footer">
         <div class="container">
