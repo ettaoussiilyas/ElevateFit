@@ -10,9 +10,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!---- icon cdn link---->
-
+        <script src="./js/panier.js"></script>
 
     </head>
 
@@ -36,7 +36,7 @@
     
                 <ul class="menu-bar">
     
-                    <li >&#36;0.00</li>
+                    <li id="price-header-details">&#36;0.00</li>
                     <li><a href="./panier.html"><i class='fas fa-shopping-cart' style="color: #ff523b;"></i></a></li>
     
                 </ul>
@@ -98,7 +98,7 @@
                     <!--no of products-->
                     <input type="number" value="1" min="1" id="quantity">
                     <!--add to cart button-->
-                    <a href="./panier.html" onclick="ajouterAuPanier()" class="btn" id="rederiction-panier">
+                    <a href="./panier.html" onclick="" class="btn" id="rederiction-panier">
                         Ajouter au panier
                     </a>
                     <!-- <a href="" class="btn">Ajouter au panier</a> -->
@@ -241,48 +241,9 @@
     <!-----------------JS----------------------->
 
 
-<script src="js/script.js"></script>
-<script src="./js/DetailsPage.js"></script>
-<!-- <script>
-    
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('product');
-const products = {
-    1: {
-        name: "Red Printed T-Shirt by HRX",
-        price: "$20.00",
-        description: "Give Your summer wardrobe a style upgrade with the HTX Men's Active T-shirt.",
-        image: "images/gallery-1.jpg"
-    },
-    2: {
-        name: "Black Shoes",
-        price: "$50.00",
-        description: "Stylish black shoes for all occasions.",
-        image: "images/product-2.jpg"
-    },
-    3: {
-        name: "Black Underwear",
-        price: "$75.00",
-        description: "Comfortable and stylish black underwear.",
-        image: "Images/product-3.jpg"
-    },
-    4: {
-        name: "Black Puma T-Shirt",
-        price: "$59.00",
-        description: "Trendy black Puma T-shirt for casual wear.",
-        image: "Images/product-4.jpg"
-    }
-};
-if (productId && products[productId]) {
-    const product = products[productId];
-    document.querySelector('h1').innerText = product.name;
-    document.querySelector('h4').innerText = product.price;
-    document.querySelector('p').innerText = product.description;
-    document.getElementById('img').src = product.image;
-}
-
-
-</script> -->
+    <script src="js/script.js"></script>
+    <script src="./js/DetailsPage.js"></script>
+    <script src="./js/panier.js"></script>
     </body>
 
 </html>

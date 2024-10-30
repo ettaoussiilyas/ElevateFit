@@ -99,8 +99,6 @@ if (productId && products[productId]) {
     
 //     const url = `panier.html?product=${productId}&quantity=${quantity}`;
     
-//     console.log(url);
-//     alert(url);
 //     const redirect = document.getElementById("./rederiction-panier");
 //     redirect.href=`${url}`
 

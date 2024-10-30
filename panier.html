@@ -36,7 +36,7 @@
 
             <ul class="menu-bar">
 
-                <li>&#36;0.00</li>
+                <li id="price-header-panier">&#36;0.00</li>
                 <li><i class='fas fa-shopping-cart'></i></li>
 
             </ul>
@@ -45,13 +45,19 @@
             </nav>
         </header>
 
-
+        
             <!-- <div class="row"> -->    <!--row-->
-                <h1>Your Shopping Cart</h1>
+        <div class="container-carts">
+            <h1>Your Shopping Cart</h1>
+            <div id="barrier">
+                <p style="color: white; padding: 5px 40px;">Products</p>
+                <p style="color: white; padding: 5px 40px;">Price</p>
+            </div>
                 <div id="cart-container"></div>
                 <div id="total-price-container">
                     Total Price: <span id="total-price">0 DH</span>
                 </div>
+        </div>
     
     <!-------footer------->
         <div class="footer">

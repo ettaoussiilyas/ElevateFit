@@ -101,3 +101,6 @@ function showAllProducts() {
         product.style.display = "block";
     });
 }
+
+// ************************direct card adding****************************
+

@@ -74,12 +74,10 @@ const products = {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Retrieve the cart from local storage
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartContainer = document.getElementById("cart-container");
     let totalPrice = 0;
 
-    // Function to display cart items
     function displayCartItems() {
         cartContainer.innerHTML = ""; // Clear previous items
         totalPrice = 0; // Reset total price
@@ -96,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
             productDiv.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
                 <h4 class="product-title">${product.name}</h4>
-                <p class="product-price" id="price-${item.id}">${itemTotalPrice.toFixed(2)} DH</p>
+                <p class="product-price" id="price-${item.id}">${itemTotalPrice.toFixed(2)} $</p>
                 <div class="quantity-container">
                     <input type="number" value="${item.quantity}" min="1" class="quantity-input" id="quantity-${item.id}">
                     <button class="remove-button" id="remove-${item.id}">Remove</button>
@@ -112,20 +110,32 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (newQuantity < 1) {
                     this.value = 1; // Reset to 1 if less than 1
                 }
+
+                // Update quantity in cart array and localStorage
+                const itemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
+                if (itemIndex !== -1) {
+                    cart[itemIndex].quantity = newQuantity;
+                    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
+                }
+
+                // update item and total price display
                 updateItemPrice(item.id, newQuantity, product.price);
             });
 
-            // Add event listener for remove button
+            // event listener for remove button
             const removeButton = document.getElementById(`remove-${item.id}`);
             removeButton.addEventListener("click", function() {
                 removeItemFromCart(item.id);
             });
         });
         
-        document.getElementById("total-price").textContent = totalPrice.toFixed(2) + " $"; // Display total price
+        document.getElementById("total-price").textContent = totalPrice.toFixed(2) + " $"; // total price
+        // document.getElementById("price-header-panier").textContent = totalPrice.toFixed(2) + " $"; //
+        // document.getElementById("price-header-home").textContent = totalPrice.toFixed(2) + " $"; // 
+        // document.getElementById("price-header-details").textContent = totalPrice.toFixed(2) + " $"; // 
     }
 
-    // Function to update item price and total
+    //  to update item price and total price
     function updateItemPrice(productId, quantity, productPrice) {
         const itemTotalPrice = productPrice * quantity;
         const priceElement = document.getElementById(`price-${productId}`);
@@ -135,18 +145,23 @@ document.addEventListener("DOMContentLoaded", function() {
         totalPrice = 0; // Reset total price
         cart.forEach(item => {
             const currentQuantity = item.id === productId ? quantity : item.quantity; // Update quantity if it's the current item
-            totalPrice += productPrice * currentQuantity;
+            totalPrice += products[item.id].price * currentQuantity;
         });
         document.getElementById("total-price").textContent = totalPrice.toFixed(2) + " $"; // Update total price display
+        // document.getElementById("price-header-panier").textContent = totalPrice.toFixed(2) + " $"; // Update total price display
+        // document.getElementById("price-header-home").textContent = totalPrice.toFixed(2) + " $"; // here
+        // document.getElementById("price-header-details").textContent = totalPrice.toFixed(2) + " $"; // 
+
     }
 
     // Function to remove item from cart
     function removeItemFromCart(productId) {
         cart = cart.filter(item => item.id !== productId); // Remove the item
         localStorage.setItem("cart", JSON.stringify(cart)); // Update local storage
-        displayCartItems(); // Refresh the cart display
+        displayCartItems(); // refresh the cart
     }
 
     // Call the function to display items
     displayCartItems();
 });
+// ***************************************************************
