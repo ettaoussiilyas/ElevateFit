@@ -80,7 +80,7 @@ if (productId && products[productId]) {
     const product = products[productId];
     document.querySelector('h1').innerText = product.name;
     document.querySelector('h4').innerText = product.price;
-    document.querySelector('p').innerText = product.description;
+    document.getElementById('pdesc').innerText = product.description;
     document.getElementById('product-img-01').src = product.image;
     document.getElementById('product-img-02').src = product.image;
     document.getElementById('product-img-03').src = product.image;
