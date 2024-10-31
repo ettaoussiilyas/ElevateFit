@@ -104,3 +104,13 @@ function showAllProducts() {
 
 // ************************direct card adding****************************
 
+document.addEventListener("DOMContentLoaded", function() {
+    const totalPrice = localStorage.getItem("totalPrice") || "0.00";
+
+    if (document.getElementById("price-header-products")) {
+        document.getElementById("price-header-products").textContent = totalPrice + " $";
+    }
+    if (document.getElementById("price-header-home")) {
+        document.getElementById("price-header-home").textContent = totalPrice + " $";
+    }
+});

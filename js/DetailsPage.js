@@ -129,3 +129,10 @@ document.getElementById("rederiction-panier").addEventListener("click", function
 
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const totalPrice = localStorage.getItem("totalPrice") || "0.00";
+
+    if (document.getElementById("price-header-details")) {
+        document.getElementById("price-header-details").textContent = totalPrice + " $";
+    }
+});

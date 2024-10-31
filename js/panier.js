@@ -130,9 +130,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         
         document.getElementById("total-price").textContent = totalPrice.toFixed(2) + " $"; // total price
-        // document.getElementById("price-header-panier").textContent = totalPrice.toFixed(2) + " $"; //
-        // document.getElementById("price-header-home").textContent = totalPrice.toFixed(2) + " $"; // 
-        // document.getElementById("price-header-details").textContent = totalPrice.toFixed(2) + " $"; // 
+        document.getElementById("price-header-panier").textContent = totalPrice.toFixed(2) + " $"; //
+        localStorage.setItem("totalPrice", totalPrice.toFixed(2)); // Save the total price to localStorage
+
+
     }
 
     //  to update item price and total price
@@ -148,9 +149,8 @@ document.addEventListener("DOMContentLoaded", function() {
             totalPrice += products[item.id].price * currentQuantity;
         });
         document.getElementById("total-price").textContent = totalPrice.toFixed(2) + " $"; // Update total price display
-        // document.getElementById("price-header-panier").textContent = totalPrice.toFixed(2) + " $"; // Update total price display
-        // document.getElementById("price-header-home").textContent = totalPrice.toFixed(2) + " $"; // here
-        // document.getElementById("price-header-details").textContent = totalPrice.toFixed(2) + " $"; // 
+        document.getElementById("price-header-panier").textContent = totalPrice.toFixed(2) + " $"; // Update total price display
+        localStorage.setItem("totalPrice", totalPrice.toFixed(2)); 
 
     }
 
