@@ -27,4 +27,18 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("price-header-home").textContent = totalPrice + " $";
     }
 });
- 
+//  ***************burger menu******************
+
+// script.js
+
+function toggleMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('show'); // Toggle the show class
+    
+}
+
+
+
+
+
+

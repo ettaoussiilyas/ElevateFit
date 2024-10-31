@@ -32,27 +32,54 @@
     <!--making header-->
     <header>
 
-        <nav id="nav">
-
-            <img src="images/logo-white.png" class="logo">
-
-            <ul class="menu-bar-side">
-                <li><a href="index.html" style=" all: unset;">Home</a></li>
-                <li><a href="Products.html" style=" all: unset;">Shope</a></li>
-                <li><a href="#" style=" all: unset;">about</a></li>
-                <li><a href="#" style=" all: unset;">contact us</a></li>
+        <!-- <nav id="nav">
+            <img src="images/logo-white.png" class="logo" alt="Logo">
+            
+            <ul class="menu-bar-side" id="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Products.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
-
-            <ul class="menu-bar">
-
+        
+            <ul class="menu-bar" id="menuCart">
                 <li id="price-header-home">&#36;0.00</li>
                 <li><a href="./panier.html"><i class='fas fa-shopping-cart' style="color: #ff523b;"></i></a></li>
-
             </ul>
-
-            <i class="fa fa-bars"></i>
+        
+            <i class="fa fa-bars burger-icon" onclick="toggleMenu()"></i>
         </nav>
-
+         -->
+    
+         <nav id="nav">
+            <img src="images/logo-white.png" class="logo" alt="Logo" id="logo">
+            
+            <!-- Main menu (links section) -->
+            <ul class="menu-bar-side" id="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Products.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        
+            <!-- Cart and price info section -->
+            <ul class="menu-bar" id="menuCart">
+                <li id="price-header-home">&#36;0.00</li>
+                <li><a href="./panier.html"><i class='fas fa-shopping-cart' style="color: #ff523b;"></i></a></li>
+            </ul>
+        
+            <!-- Burger menu icon -->
+            <i class="fa fa-bars burger-icon" onclick="toggleMenu()"></i>
+        
+            <!-- Mobile menu -->
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Products.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
 
         <div class="content">
 
@@ -521,12 +548,11 @@
             <a href="" class="copyright">Copyright 2024 - Made with ❤️ LorenzCipher</a>
         </div>
     </div>
-
     <!-----------------JS----------------------->
     <script src="./js/panier.js"></script>
     <script src="./js/directPanier.js"></script>
     <script src="./js/Products.js"></script>
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

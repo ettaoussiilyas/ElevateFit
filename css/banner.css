@@ -259,7 +259,7 @@
       font-size: 12px;
     }
     
-    header .content .heading{
+    header .content .heading {
       font-size:2.1em;
     }
     
@@ -273,3 +273,56 @@
     
     
   }
+/* ***************************burger menu*************************** */
+
+
+/* styles.css */
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack items vertically */
+  padding: 0; /* Reset padding */
+  list-style-type: none; /* Remove bullet points */
+}
+
+/* Show mobile menu when toggled */
+.mobile-menu.show {
+   /* Show menu when toggled */
+  .logo{
+    display:none;
+  }
+  display: flex;
+}
+
+/* Show mobile menu on small screens */
+@media (max-width: 768px) {
+  .menu-bar-side {
+      display: none;
+  }
+
+  .burger-icon {
+      display: block; /* Show burger icon */
+      cursor: pointer;
+  }
+
+}
+
+/* Styles for the burger icon */
+.burger-icon {
+  display: none; /* Hidden by default */
+  font-size: 20px; /* Adjust size as needed */
+}
+
+/* Show burger icon on smaller screens */
+@media (max-width: 768px) {
+  .burger-icon {
+      display: block; /* Show burger icon */
+  }
+}
+
+
+
+
+
+
