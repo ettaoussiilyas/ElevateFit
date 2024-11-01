@@ -32,9 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
 // script.js
 
 function toggleMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
+    // const mobileMenu = document.getElementsByClassName("mobileMenu");
+    const mobileMenu = document.querySelector(".mobileMenu");
     mobileMenu.classList.toggle('show'); // Toggle the show class
-    
+
 }
 
 
