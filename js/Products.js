@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.getElementById("price-header-products")) {
         document.getElementById("price-header-products").textContent = totalPrice + " $";
     }
-    if (document.getElementById("price-header-home")) {
-        document.getElementById("price-header-home").textContent = totalPrice + " $";
-    }
+    // if (document.getElementById("price-header-home")) {
+    //     document.getElementById("price-header-home").textContent = totalPrice + " $";
+    // }
 });

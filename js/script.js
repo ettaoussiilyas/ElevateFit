@@ -20,13 +20,7 @@ SmallImg[3].onclick = function()
     ProductImg.src = SmallImg[3].src;   
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const totalPrice = localStorage.getItem("totalPrice") || "0.00";
 
-    if (document.getElementById("price-header-home")) {
-        document.getElementById("price-header-home").textContent = totalPrice + " $";
-    }
-});
 //  ***************burger menu******************
 
 // script.js
@@ -37,7 +31,11 @@ function toggleMenu() {
     mobileMenu.classList.toggle('show'); // Toggle the show class
 
 }
-
+// ****************************************
+// document.addEventListener("DOMContentLoaded", function() {
+//     const totalPrice = localStorage.getItem("totalPrice") || "0.00";
+//     document.getElementById("price-header-home").textContent = totalPrice + " $";
+// });
 
 
 
