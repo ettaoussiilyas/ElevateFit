@@ -583,6 +583,33 @@ form a{
     gap: 20px; /* Optional: adjusts the spacing between items */
 }
 
+@media (min-width: 0px) and (max-width: 589px) {
+    .product-container-grid {
+        max-width: 100%;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-flow: dense;
+        gap: 20px;
+    }   
+}
+
+@media (min-width: 590px) and (max-width: 780px) {
+    .product-container-grid {
+        max-width: 100%;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        gap: 20px;
+    }   
+}
+
+
 /* make the product cart showing a button on the hover */
 
 .product-card {
