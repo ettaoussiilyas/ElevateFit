@@ -559,6 +559,11 @@ form a{
     .cart-info p{
         display:none;/*hide product name in smaller screen*/
     }
+    .small-img-row{
+        display: flex;
+        width: 100%;
+        
+    }
 
 }
 .sortingContainer{
