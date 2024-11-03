@@ -98,3 +98,19 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: 425px) {
+    .product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* width: 100%; */
+        justify-content: center;
+
+    }
+    .quantity-container{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+  }
