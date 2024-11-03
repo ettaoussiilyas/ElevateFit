@@ -111,7 +111,7 @@
                 <div class="border-b border-gray-300 pb-4 mb-4">
                     <div class="flex justify-between">
                         <p>Total Price :</p>
-                        <p class="font-semibold" id="total-price-checkout">$88.00</p>
+                        <p class="font-semibold" id="test">0.00$</p>
                     </div>
 
                     <div class="flex justify-between mt-2">
@@ -183,5 +183,12 @@
         </div>  
         <script src="./js/checkout.js"></script>
         <script src="./js/script.js"></script>
+        <SCript>
+            
+            const totalPrice = localStorage.getItem("totalPrice"); 
+            // document.getElementById("test").textContent = 22;
+            document.getElementById("test").textContent = totalPrice + " $";
+
+        </SCript>
 </body>
 </html>

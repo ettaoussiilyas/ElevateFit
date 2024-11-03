@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.getElementById("price-header-checkout")) {
         document.getElementById("price-header-checkout").textContent = totalPrice + " $";
     }
-    document.getElementById("total-price-checkout").textContent = totalPrice + " $";
+    if (document.getElementById("total-price-checkout")) {
+        document.getElementById("total-price-checkout").textContent = totalPrice + " $";
+    }
+    // document.getElementById("total-price-checkout").textContent = totalPrice + " $";
     document.getElementById("total-price-checkout-reductio").textContent = totalPrice + " $";
 });
