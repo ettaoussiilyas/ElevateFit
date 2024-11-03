@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
             totalPrice += itemTotalPrice; // Update total price
 
             productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
+                <img src="./${product.image}" alt="${product.name}">
                 <h4 class="product-title">${product.name}</h4>
                 <p class="product-price" id="price-${item.id}">${itemTotalPrice.toFixed(2)} $</p>
                 <div class="quantity-container">
