@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <meta name="keywords" content="checkout, ElevateFite payment, buy sports clothing, buy watches, secure checkout">
+    <meta name="description" content="Complete your purchase securely on ElevateFite. Check out your order for sports clothing and watches with safe payment options.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body class="bg-gray-100">
+    <nav class="nav">
+        <img src="./images/logo-white.png" class="logo" alt="Logo" id="logo" >
+        
+        <!-- Main menu (links section) -->
+        <ul class="menu-bar-side" id="menuLinks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Products.html">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./login.html">Login</a></li>
+        </ul>
+    
+        <!-- Cart and price info section -->
+        <ul class="menu-bar" id="menuCart">
+            <li id="total-price-checkout">&#36;0.00</li>
+            <li><a href="./panier.html"><i class='fas fa-shopping-cart burger-icon' style="color: #ff523b;"></i></a></li>
+        </ul>
+    
+        <!-- Burger menu icon -->
+        <i class="fa fa-bars burger-icon" onclick="toggleMenu()"></i>
+    
+    </nav>
+    <nav class="mobile-nav">
+        <ul class="mobile-menu mobileMenu" >   <!--id="mobileMenu"-->
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Products.html">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./panier.html"><i class='fas fa-shopping-cart burger-icon' style="color: #ff523b;"></i></a></li>
+        </ul>
+    </nav>
+    <div class="max-w-5xl mx-auto my-20">
+        <!-- Container for Form and Order Summary -->
+        <div class="bg-white p-8 shadow-lg rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Form Section -->
+            <div>
+                <h2 class="text-xl font-semibold mb-6">Billing Details</h2>
+                
+                <form class="space-y-4">
+                    <div>
+                        <label for="first-name" class="block text-sm font-medium text-gray-700">First Name *</label>
+                        <input required type="text" id="first-name" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" placeholder="Ilyas">
+                    </div>
+
+                    <div>
+                        <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name *</label>
+                        <input required type="text" id="last-name" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" placeholder="Ettaoussi">
+                    </div>
+
+                    <div>
+                        <label for="country" class="block text-sm font-medium text-gray-700">Country *</label>
+                        <input required type="text" id="country" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" placeholder="Morocco">
+                    </div>
+
+                    <div>
+                        <label for="street-address" class="block text-sm font-medium text-gray-700">Street Address *</label>
+                        <input required type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded-md" placeholder="Rue no Dn 001. (optional)">
+                    </div>
+
+                    <div>
+                        <label for="city" class="block text-sm font-medium text-gray-700">Town / City *</label>
+                        <input required type="text" id="city" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" placeholder="Rabat">
+                    </div>
+
+                    <div>
+                        <label for="state" class="block text-sm font-medium text-gray-700">State / County *</label>
+                        <input required type="text" id="state" class="mt-1 block w-full border border-gray-300 p-2 rounded-md">
+                    </div>
+
+                    <div>
+                        <label for="postcode" class="block text-sm font-medium text-gray-700">Postcode / ZIP *</label>
+                        <input required type="text" id="postcode" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" placeholder="10200">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone *</label>
+                        <input required type="text" id="phone" class="mt-1 block w-full border border-gray-300 p-2 rounded-md">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+                        <input required type="email" id="email" class="mt-1 block w-full border border-gray-300 p-2 rounded-md" placeholder="ettaoussiilyas0.1@gmail.com">
+                    </div>
+                    <button class="w-full bg-red-500 text-white font-semibold py-3 mt-6 rounded-md hover:bg-red-200 " type="submit">
+                        Place Order
+                    </button>
+                </form>
+            </div>
+
+            <!-- Order Summary Section -->
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">Your Order</h2>
+                
+                <div class="border-b border-gray-300 pb-4 mb-4">
+                    <div class="flex justify-between">
+                        <p>Total Price :</p>
+                        <p class="font-semibold" id="test">0.00$</p>
+                    </div>
+
+                    <div class="flex justify-between mt-2">
+                        <p>Shipping</p>
+                        <p class="text-red-500">Free shipping</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between font-semibold text-lg mt-4">
+                    <p>Total</p>
+                    <p id="total-price-checkout-reductio">$88.00</p>
+                </div>
+
+                <button class="w-full bg-red-500 text-white font-semibold py-3 mt-6 rounded-md hover:bg-red-200 " type="submit">
+                    <a href="./panier.html">Products Change</a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                
+          
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and Ios mobile phone.</p>
+                   
+                 
+                    <div class="app-logo">
+                        <img src="./images/play-store.png">
+                        <img src="./images/app-store.png">
+                    </div>   
+                
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="./images/logo-white.png">
+                    <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                    
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    
+                </div>
+            </div>
+    
+            <hr>
+            <a href="" class="copyright">Copyright 2024   - Made with ❤️ LorenzCipher</a>
+        </div>
+        </div>  
+        <script src="./js/checkout.js"></script>
+        <script src="./js/script.js"></script>
+        <SCript>
+            
+            const totalPrice = localStorage.getItem("totalPrice"); 
+            // document.getElementById("test").textContent = 22;
+            document.getElementById("test").textContent = totalPrice + " $";
+
+        </SCript>
+</body>
+</html>

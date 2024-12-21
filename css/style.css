@@ -29,7 +29,8 @@ nav ul li{
 /*for menu links*/
 a{
     text-decoration: none;
-    color:#555;
+    /* color:#555; */
+    color: white;
 }
 p{
     color:#555;
@@ -96,14 +97,14 @@ p{
 .col-3 img{
     width: 100%;/*utilize full col-3 width which has min-width of 250 px*/
 }
-/*featured products*/
-/*small container edit whole section consist of rows*/
 .small container{
     max-width: 1080px;
-    margin:auto;/*make images in center*/
+    margin:auto;
     padding-left: 25px;
     padding-right: 25px;
 }
+
+
 /*col-4 will edit col of images*/
 .col-4{
     flex-basis: 25%;/*each image column occupies 25% each*/
@@ -143,7 +144,9 @@ h4{
 }
 /*for products price*/
 .col-4 p{    
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: 20px;
+    padding-top: 3px;
 }
 /*change color of rating stars -> .rating for rating class and .fa for icons*/
 .rating .fa{
@@ -556,5 +559,87 @@ form a{
     .cart-info p{
         display:none;/*hide product name in smaller screen*/
     }
+    .small-img-row{
+        display: flex;
+        width: 100%;
+        
+    }
 
+}
+.sortingContainer{
+    width: 100%;
+    /* background-color: #ff523b; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: min-content;
+    padding: 0;
+    margin: 0;
+}
+/* section products container */
+.product-container-grid {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-auto-flow: dense; /* Fills in empty spaces when some items are hidden */
+    gap: 20px; /* Optional: adjusts the spacing between items */
+}
+
+@media (min-width: 0px) and (max-width: 589px) {
+    .product-container-grid {
+        max-width: 100%;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-flow: dense;
+        gap: 20px;
+    }   
+}
+
+@media (min-width: 590px) and (max-width: 780px) {
+    .product-container-grid {
+        max-width: 100%;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        gap: 20px;
+    }   
+}
+
+
+/* make the product cart showing a button on the hover */
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.view-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ff523b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.product-card:hover .view-button {
+    display: block;
+}
+.product-card:hover .product-image {
+    opacity: 0.5;
 }

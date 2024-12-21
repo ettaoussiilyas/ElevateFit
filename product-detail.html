@@ -4,15 +4,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>elevateFit</title>
+        <title>ElevateFit| Details Page</title>
+        <meta name="keywords" content="shopping cart, ElevateFite, checkout, sports clothing cart, watch cart">
+        <meta name="description" content="Review your selected items in your ElevateFite cart. Make adjustments before you proceed to checkout and complete your purchase.">
+
         <link rel="stylesheet" href="css/style.css"> 
         <link rel="stylesheet" href="css/detail.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!---- icon cdn link---->
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/banner.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     </head>
 
@@ -21,9 +24,9 @@
        
         
             <!--making header-->
-            <header>
+            <!-- <header> -->
       
-                <nav id="nav">
+                <!-- <nav id="nav">
                   
                   <img src="images/logo-white.png" class="logo">
                   
@@ -36,15 +39,46 @@
     
                 <ul class="menu-bar">
     
-                    <li>&#36;0.00</li>
-                    <li><i class='fas fa-shopping-cart'></i></li>
+                    <li id="price-header-details">&#36;0.00</li>
+                    <li><a href="./panier.html"><i class='fas fa-shopping-cart' style="color: #ff523b;"></i></a></li>
     
                 </ul>
                   
                   <i class="fa fa-bars"></i>
+                </nav> -->
+
+                <nav class="nav">
+                    <img src="./images/logo-white.png" class="logo" alt="Logo" id="logo" >
+                    
+                    <!-- Main menu (links section) -->
+                    <ul class="menu-bar-side" id="menuLinks">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./Products.html">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="./login.html">Login</a></li>
+                    </ul>
+                
+                    <!-- Cart and price info section -->
+                    <ul class="menu-bar" id="menuCart">
+                        <li id="price-header-details">&#36;0.00</li>
+                        <li><a href="./panier.html"><i class='fas fa-shopping-cart burger-icon' style="color: #ff523b;"></i></a></li>
+                    </ul>
+                
+                    <!-- Burger menu icon -->
+                    <i class="fa fa-bars burger-icon" onclick="toggleMenu()"></i>
+                
+                </nav>
+                <nav class="mobile-nav">
+                    <ul class="mobile-menu mobileMenu" >   <!--id="mobileMenu"-->
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./Products.html">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./panier.html"><i class='fas fa-shopping-cart burger-icon' style="color: #ff523b;"></i></a></li>
+                    </ul>
                 </nav>
            
-          </header>
+          <!-- </header> -->
 
     <!------------Single Products Detail-------------->
    
@@ -54,28 +88,37 @@
             
           
 
-                <div class="col-2">
-                     <img src="images/gallery-1.jpg" width="100%" id="product-img">
+                <div class="col-2 ">
+                     <img src="./images/gallery-1.jpg" width="100%" id="product-img-01">
             
-                     <div class="small-img-row">
+                     <div class="small-img-row COL-2">
                          
                         <div class="small-img-col">
-                             <img src="images/gallery-1.jpg" width="100%" class="small-img">
+                             <img src="./images/gallery-1.jpg" width="100%" class="small-img" id="product-img-02">
                         </div>
 
                         <div class="small-img-col">
-                            <img src="images/gallery-2.jpg" width="100%" class="small-img">
+                            <img src="./images/gallery-2.jpg" width="100%" class="small-img" id="product-img-03">
                         </div>
                         
                         <div class="small-img-col">
-                            <img src="images/gallery-3.jpg" width="100%" class="small-img">
+                            <img src="./images/gallery-3.jpg" width="100%" class="small-img" id="product-img-04">
                         </div>
                         
                         <div class="small-img-col">
-                            <img src="images/gallery-4.jpg" width="100%" class="small-img">
+                            <img src="./images/gallery-4.jpg" width="100%" class="small-img" id="product-img-05">
                         </div>
 
                      </div>
+                     <!-- <div class="small-img-row COL-2">
+                        <div class="small-img-col">
+                            <img src="./images/gallery-3.jpg" width="100%" class="small-img" id="product-img-04">
+                        </div>
+                        
+                        <div class="small-img-col">
+                            <img src="./images/gallery-4.jpg" width="100%" class="small-img" id="product-img-05">
+                        </div>
+                     </div> -->
 
                 </div>
 
@@ -96,11 +139,15 @@
                     </select>
                     
                     <!--no of products-->
-                    <input type="number" value="1">
-                    <a href="" class="btn">Add To Cart</a><!--add to cart button-->
+                    <input type="number" value="1" min="1" id="quantity">
+                    <!--add to cart button-->
+                    <a href="./panier.html" onclick="" class="btn" id="rederiction-panier">
+                        Ajouter au panier
+                    </a>
+                    <!-- <a href="" class="btn">Ajouter au panier</a> -->
                     <h3>Product Details <i class="fa fa-indent" aria-hidden="true"></i></h3>
                     <br>
-                    <p>Give Your summer wardrobe a style upgrade with the HTX Men's 
+                    <p id="pdesc">Give Your summer wardrobe a style upgrade with the HTX Men's 
                     Active T-shirt. Team it with a pair of shorts for your morning
                     Workout or a denims for an evening out with the guys.
                     </p>
@@ -122,9 +169,9 @@
 
     
        <div class="row">
-           <div class="col-4">
-               <img src="Images/product-9.jpg">
-               <h4>Red Printed T-shirt</h4>
+           <div class="col-4 product-card">
+               <img src="./images/product-9.jpg" class="product-image">
+               <h4>Classic Rolex Watch</h4>
                <div class="rating">
                   <i class="fa fa-star" aria-hidden="true"></i>
                   <i class="fa fa-star" aria-hidden="true"></i>
@@ -132,12 +179,13 @@
                   <i class="fa fa-star" aria-hidden="true"></i>
                   <i class="fa fa-star-o" aria-hidden="true"></i>
                </div>
-               <p>$50.00</p>
+               <p>$100</p>
+               <a href="./product-detail.html?product=9" class="view-button">View Product</a>
            </div>
 
-           <div class="col-4">
-              <img src="Images/product-10.jpg">
-              <h4>Red Printed T-shirt</h4>
+           <div class="col-4 product-card">
+              <img src="./images/product-10.jpg" class="product-image">
+              <h4>Puma Shoes Flag</h4>
               <div class="rating">
                  <i class="fa fa-star" aria-hidden="true"></i>
                  <i class="fa fa-star" aria-hidden="true"></i>
@@ -145,12 +193,13 @@
                  <i class="fa fa-star" aria-hidden="true"></i>
                  <i class="fa fa-star-o" aria-hidden="true"></i>
               </div>
-              <p>$50.00</p>
+              <p>$30</p>
+              <a href="./product-detail.html?product=10" class="view-button">View Product</a>
           </div>
 
-          <div class="col-4">
-              <img src="Images/product-11.jpg">
-              <h4>Red Printed T-shirt</h4>
+          <div class="col-4 product-card">
+              <img src="./images/product-11.jpg" class="product-image">
+              <h4>Gree Sketcher</h4>
               <div class="rating">
                  <i class="fa fa-star" aria-hidden="true"></i>
                  <i class="fa fa-star" aria-hidden="true"></i>
@@ -158,12 +207,13 @@
                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
                  <i class="fa fa-star-o" aria-hidden="true"></i>
               </div>
-              <p>$50.00</p>
+              <p>$20</p>
+              <a href="./product-detail.html?product=11" class="view-button">View Product</a>
           </div>
 
-          <div class="col-4">
-              <img src="Images/product-12.jpg">
-              <h4>Red Printed T-shirt</h4>
+          <div class="col-4 product-card">
+              <img src="./images/product-12.jpg" class="product-image">
+              <h4>Black Nike Underwear</h4>
               <div class="rating">
                  <i class="fa fa-star" aria-hidden="true"></i>
                  <i class="fa fa-star" aria-hidden="true"></i>
@@ -172,7 +222,8 @@
                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
               </div>
-              <p>$50.00</p>
+              <p>$50</p>
+              <a href="./product-detail.html?product=12" class="view-button">View Product</a>
           </div>
        </div>
        
@@ -191,14 +242,14 @@
                    
                  
                     <div class="app-logo">
-                        <img src="images/play-store.png">
-                        <img src="images/app-store.png">
+                        <img src="./images/play-store.png">
+                        <img src="./images/app-store.png">
                     </div>   
                 
                 </div>
 
                 <div class="footer-col-2">
-                    <img src="images/logo-white.png">
+                    <img src="./images/logo-white.png">
                     <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
                 </div>
 
@@ -233,8 +284,10 @@
     <!-----------------JS----------------------->
 
 
-<script src="js/script.js"></script>
-    
+    <script src="js/script.js"></script>
+    <script src="./js/DetailsPage.js"></script>
+    <script src="./js/panier.js"></script>
+    <script src="./js/script.js"></script>
     </body>
 
 </html>

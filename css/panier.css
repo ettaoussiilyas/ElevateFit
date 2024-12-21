@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    
+}
+.container-carts{
+    min-height: 100vh;
+}
+h1 {
+    text-align: center;
+    margin: 50px;
+
+}
+
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.product img {
+    width: 80px; /* Set the width of the product image */
+    height: 80px; /* Set the height of the product image */
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    flex: 1; /* Allow title to take available space */
+}
+
+.product-price {
+    /* color: #28a745; */
+    color: #689de3;
+    font-size: 16px;
+    margin: 0;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Align quantity input to the right */
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remove-button {
+    background-color: #dc3545; /* Red color for remove button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.remove-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+#total-price-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#barrier{
+    min-height: 20px;
+    max-width: 70%;
+    background-color: #ff523b;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 430px) {
+    .product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        justify-content: center;
+
+    }
+    .quantity-container{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+  }
